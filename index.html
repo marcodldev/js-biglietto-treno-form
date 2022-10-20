@@ -10,15 +10,40 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color:#b91450 ;">
 
-    <main>
-        <div>
-            <input type="text" id="nomeinput" value="" placeholder="Come ti chiami?">
-            <input type="text" id="kminput" value="" placeholder="Quanti KM devi percorrere?">
-            <input type="text" id="etainput" value="" placeholder="Quanti anni hai?">
-            <button onclick="importoDati(); return false">Genera</button>
+    <main class="container text-center">
+
+        <h1 class="text-light pb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+
+        <div class="bg-light p-4 rounded">
+
+            <div class="d-flex justify-content-around">
+                <div class="" style="width: 18rem;">
+                    <p>Nome Cognome</p>
+                    <input style="border-color: #b91450;" class="border-1 rounded text-center" type="text"
+                        id="nomeinput" value="" placeholder="Come ti chiami?">
+                </div>
+
+                <div class="" style="width: 18rem;">
+                    <p>Km da percorrere</p>    
+                    <input style="border-color: #b91450;" class="border-1 rounded text-center" type="text" id="kminput"
+                        value="" placeholder="Quanti KM devi percorrere?">
+                </div>
+
+                <div class="" style="width: 18rem;">
+                    <p>Fascia d'età</p>           
+                    <input style="border-color: #b91450;" class="border-1 rounded text-center" type="text" id="etainput"
+                        value="" placeholder="Quanti anni hai?">
+                </div>       
+            </div>
+
+            <div class="pt-5">      
+                <button class="btn btn-danger border rounded"  onclick="importoDati(); return false">Genera</button>
+                <button class="btn btn-danger border rounded" >Annulla</button>
+            </div>
         </div>
+
 
         <div id="prezzofinale">
 
