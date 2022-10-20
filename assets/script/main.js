@@ -12,15 +12,32 @@
 
 // VARIABILI 
 
-let nomeutente = document.getElementById("nomeinput");
-
-let kmutente = document.getElementById("kminput");
-
-let etautente = document.getElementById("etainput");
-
-
 function importoDati() {
-    let nome = nomeutente.value;
-    let km = kmutente.value;
-    let etautente = eta.value;
+    let nomeutente = document.getElementById("nomeinput").value;
+
+    let kmutente = document.getElementById("kminput").value;
+
+    let etautente = document.getElementById("etainput").value;
+
+    let prezzo = kmutente * 0.21;
+
+    let sconto20 = prezzo * 0.2;
+
+    let sconto40 = prezzo * 0.4;
+
+    let prezzofinale = document.getElementById("prezzofinale");
+
+        if( etautente > 18 && etautente < 65) {
+        prezzofinale.innerHTML = `il prezzo è ${prezzo}`;
+    } else if (eta < 18) {
+        prezzofinale.innerHTML = `il prezzo è ${prezzo -sconto20}`;
+    } else {
+        prezzofinale.innerHTML = `il prezzo è ${prezzo -sconto40}`;
 }
+console.log(etautente)
+}
+
+
+
+
+
