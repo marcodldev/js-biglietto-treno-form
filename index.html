@@ -34,12 +34,18 @@
                 <div class="" style="width: 18rem;">
                     <p>Fascia d'età</p>
                     <input style="border-color: #b91450;" class="border-1 rounded text-center" type="text" id="etainput"
-                        value="" placeholder="Quanti anni hai?">
+                        value="" placeholder="Quanti anni hai?"> 
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>     -->
                 </div>
             </div>
 
             <div class="pt-5">
-                <button class="btn btn-danger border rounded" onclick="importoDati(); return false">Genera</button>
+                <button id="bottone" class="btn btn-danger border rounded" onclick="importoDati(); return false">Genera</button>
                 <button class="btn btn-danger border rounded">Annulla</button>
             </div>
         </div>
@@ -60,7 +66,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-between w-100">
                         <div>
                             <h5 class="p-2 pt-4">Offerta</h5>
                             <p class="p-2">Biglietto Standard</p>
@@ -68,12 +74,12 @@
 
                         <div>
                             <h5 class="p-2 pt-4">Carrozza</h5>
-                            <div id="nrandom1"></div>
+                            <div class="ps-2" id="nrandom1"></div>
                         </div>
 
                         <div>
                             <h5 class="p-2 pt-4">Codice CP</h5>
-                            <div id="nrandom2"></div>
+                            <div class="ps-2" id="nrandom2"></div>
                         </div>
 
                         <div>

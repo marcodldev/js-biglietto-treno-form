@@ -24,29 +24,45 @@ function importoDati() {
     let sconto20 = prezzo * 0.2;
 
     let sconto40 = prezzo * 0.4;
+    
+    let numerorandom = generaNumeroRandom(2, 1000);
+
+    let numerorandom1 = generaNumeroRandom1(0, 11);
 
     let nomepasseggero = document.getElementById("nomepasseggero");
 
-    nomepasseggero.innerHTML = `${nomeutente}`
+    nomepasseggero.innerHTML = `${nomeutente}`;
+
+    document.getElementById("nrandom2").innerHTML = `${numerorandom}`;
+
+    document.getElementById("nrandom1").innerHTML = `${numerorandom1}`;
 
     let prezzofinale = document.getElementById("prezzofinale");
 
         if( etautente > 18 && etautente < 65) {
         prezzofinale.innerHTML = `${prezzo}€ `;
-    } else if (eta < 18) {
+    } else if (etautente < 18) {
         prezzofinale.innerHTML = `${prezzo -sconto20}€ `;
     } else {
         prezzofinale.innerHTML = `${prezzo -sconto40}€ `;
         
-        
     }
 
-        if (nomeutente)
 
-console.log(etautente)
 }
 
 
 
+// numeri random
+  
+    function generaNumeroRandom1(){
+    return Math.floor(Math.random() * 11) + 0;
+
+  }
+
+  function generaNumeroRandom(min, max){
+    return Math.floor(Math.random() * max) + min;
+
+  }
 
 
