@@ -25,6 +25,10 @@ function importoDati() {
 
     let sconto40 = prezzo * 0.4;
 
+    let nomepasseggero = document.getElementById("nomepasseggero");
+
+    nomepasseggero.innerHTML = `${nomeutente}`
+
     let prezzofinale = document.getElementById("prezzofinale");
 
         if( etautente > 18 && etautente < 65) {
@@ -33,7 +37,12 @@ function importoDati() {
         prezzofinale.innerHTML = `il prezzo è ${prezzo -sconto20}`;
     } else {
         prezzofinale.innerHTML = `il prezzo è ${prezzo -sconto40}`;
-}
+        
+        
+    }
+
+        if (nomeutente)
+
 console.log(etautente)
 }
 
